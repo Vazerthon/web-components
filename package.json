@@ -1,0 +1,19 @@
+{
+  "name": "web-components",
+  "version": "0.0.0",
+  "description": "playing with web components",
+  "main": "main.js",
+  "author": "vallis",
+  "license": "UNLICENCED",
+  "scripts": {
+    "build": "webpack",
+    "start": "webpack-dev-server --progress --colors"
+  },
+  "dependencies": {
+    "css-loader": "^0.28.4",
+    "html-webpack-plugin": "^2.28.0",
+    "style-loader": "^0.18.2",
+    "webpack": "^2.6.1",
+    "webpack-dev-server": "^2.4.5"
+  }
+}
