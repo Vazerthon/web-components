@@ -1,4 +1,3 @@
-import { components } from './components/';
+import { componentDictionary } from './components/';
 
-const v = document.createElement(components[0].selector);
-document.body.appendChild(v);
+document.body.appendChild(document.createElement(componentDictionary['mrv-app']));

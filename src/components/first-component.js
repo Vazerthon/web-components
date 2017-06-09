@@ -1,12 +1,15 @@
-export class First extends HTMLElement {
+export class First extends HTMLElement { 
   constructor() {
     super();
+    this.shadow = this.attachShadow({mode: 'open'});
+    this.render();
+  }
 
-    const shadow = this.attachShadow({mode: 'open'});
-    
-    const p1 = document.createElement('p');
-    p1.textContent = 'hello world!';
+  render() {
+    this.shadow.innerHTML = '<p>shadow p</p>';
+  }
 
-    shadow.appendChild(p1);
+  attributeChangedCallback(attributeName, oldValue, newValue, namespace) {
+    console.log('attributeChangedCallback hit');
   }
 };
