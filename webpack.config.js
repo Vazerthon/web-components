@@ -6,7 +6,11 @@ module.exports = {
     path: `${__dirname}/dist`,
     filename: "bundle.js"
   },
-  plugins: [new HtmlWebpackPlugin()],
+  plugins: [
+    new HtmlWebpackPlugin({
+      title: 'Web Component Experiments'
+    })
+  ],
   devtool: "source-map",
   module: {
     loaders: [

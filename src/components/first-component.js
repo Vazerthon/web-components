@@ -1,12 +1,7 @@
-export class First extends HTMLElement {
-  constructor() {
-    super();
+import { MrvCustomElementBase } from './mrv-custom-element-base';
 
-    const shadow = this.attachShadow({mode: 'open'});
-    
-    const p1 = document.createElement('p');
-    p1.textContent = 'hello world!';
-
-    shadow.appendChild(p1);
+export class First extends MrvCustomElementBase { 
+  render() {
+    this.shadow.innerHTML = '<p>Hello first</p>';
   }
 };
