@@ -1,15 +1,7 @@
-export class First extends HTMLElement { 
-  constructor() {
-    super();
-    this.shadow = this.attachShadow({mode: 'open'});
-    this.render();
-  }
+import { MrvCustomElementBase } from './mrv-custom-element-base';
 
+export class First extends MrvCustomElementBase { 
   render() {
-    this.shadow.innerHTML = '<p>shadow p</p>';
-  }
-
-  attributeChangedCallback(attributeName, oldValue, newValue, namespace) {
-    console.log('attributeChangedCallback hit');
+    this.shadow.innerHTML = '<p>Hello first</p>';
   }
 };
